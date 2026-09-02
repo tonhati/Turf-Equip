@@ -1,0 +1,29 @@
+source_id,source_name,brand,authority,url,roles,category_hint,locale,render_mode,trust_rank,notes
+src-autmow,Autmow,echo,dealer,https://www.autmow.com/,price,,en-us,static,3,"CANDIDATE - US dealer, Echo and Kress robotics. Price coverage not yet verified"
+src-automatedoutdoor,Automated Outdoor Solutions,echo,dealer,https://automatedoutdoor.com/,price,,en-us,static,3,CANDIDATE - US dealer. Price coverage not yet verified
+src-deere-fairway-cat,John Deere fairway mowers,deere,official,https://www.deere.com/en/mowers/fairway-mowers/,discovery,conventional_mower,en-us,js,1,Fully client-side rendered - headless browser mandatory
+src-deere-golf-hub,John Deere golf and sports turf hub,deere,official,https://www.deere.com/en-us/industries/golf-sports-turf,discovery,,en-us,js,1,Retired explore.deere.com URLs 302 here
+src-deere-product,John Deere product pages,deere,official,https://www.deere.com/en/mowers/fairway-mowers/,spec,,en-us,js,1,Specs and Compare section injected by JS. Sitemap unavailable (403 / gzipped)
+src-deere-riding-reel,John Deere riding reel mowers,deere,official,https://www.deere.com/en/mowers/riding-reel-mowers/,discovery,conventional_mower,en-us,js,1,Overlapping line; catches models absent from the fairway page
+src-echo-product,ECHO USA product pages,echo,official,https://www.echo-usa.com/turf-mowers/,spec,,en-us,static,1,Spec table in raw HTML. Canonicalize /turf-mowers/ vs /robotics/ duplicate paths
+src-echo-range-pickers,ECHO USA range pickers,echo,official,https://www.echo-usa.com/range-pickers,discovery,range_picker,en-us,js,1,Model list not yet enumerated
+src-echo-robotics-hub,ECHO USA robotics hub,echo,official,https://www.echo-usa.com/robotics,discovery,,en-us,js,1,Hub above both product lines
+src-echo-turf-mowers,ECHO USA turf mowers,echo,official,https://www.echo-usa.com/turf-mowers,discovery,autonomous_mower,en-us,js,1,"TM-850, TM-1000, TM-1050, TM-2000, TM-2050. Grid is JS-rendered"
+src-firefly-amp-l100,FireFly AMP-L100,firefly,official,https://fireflyautomatix.com/amp-mowers/,spec,autonomous_mower,en-us,static,1,"Clean spec list, dual-unit strings"
+src-firefly-m220av,FireFly M220-AV,firefly,official,https://fireflyautomatix.com/m220-av-mowers/,spec,autonomous_mower,en-us,static,1,"Clean spec list, dual-unit strings"
+src-firefly-sitemap,FireFly Automatix sitemap,firefly,official,https://fireflyautomatix.com/sitemap.xml,discovery,,en-us,static,1,Only discovery channel - no category page exists. Products are WP pages in page-sitemap.xml
+src-firefly-x100,FireFly AMP-X100 Rotary,firefly,official,https://fireflyautomatix.com/x100-rotary/,spec,autonomous_mower,en-us,static,1,NO structured specs - prose only. Needs LLM extraction or manual entry
+src-horizonagturf,Horizon Ag-Turf,deere,dealer,https://horizonagturf.com/,price,,en-us,static,3,CANDIDATE - John Deere dealer. Price coverage not yet verified
+src-kress-lawn-cat,Kress US lawn mower category,kress,official,https://www.kress.com/en-us/lawn-mowers/,discovery,conventional_mower,en-us,static,1,Battery walk-behind line
+src-kress-product,Kress US product pages,kress,official,https://www.kress.com/en-us/,spec|price,,en-us,static,1,URL template. Technical specifications accordion; label set varies per model
+src-kress-robotic-cat,Kress US robotic mower category,kress,official,https://www.kress.com/en-us/robotic-lawn-mowers/,discovery|price,autonomous_mower,en-us,static,1,15 models with USD prices on the listing itself
+src-kress-sitemap,Kress US sitemap index,kress,official,https://www.kress.com/en-us/sitemap_index.xml,discovery,,en-us,static,1,product-sitemap.xml..6. Second discovery channel; normalize registered-mark encoding before dedupe
+src-kress-voyager,Kress Voyager (KR800),kress,official,https://voyager.kress.com/en-us,discovery|spec|price,autonomous_mower,en-us,static,1,"Separate official Kress domain; different label vocabulary, needs its own alias set"
+src-siteone,SiteOne Landscape Supply,echo,dealer,https://www.siteone.com/,price,,en-us,js,3,CANDIDATE - US distributor. Price coverage not yet verified
+src-toro-fairway-cat,Toro golf fairway mowers,toro,official,https://www.toro.com/en/golf/fairway-mowers,discovery,conventional_mower,en-us,js,1,Model grid is JS-rendered
+src-toro-product,Toro product pages,toro,official,https://www.toro.com/en/product/,spec,,en-us,static,1,URL template /en/product/{5-digit}. ~55-row table in raw HTML. Prefer over PDF spec sheets
+src-toro-rm3555-series,Toro Reelmaster 3555/3575 Series,toro,official,https://www.toro.com/en/product/Reelmaster-3555-3575-Series,discovery,conventional_mower,en-us,static,1,"Static. Lists 3555-D, 3575-D"
+src-toro-rm5010-series,Toro Reelmaster 5010 Series,toro,official,https://www.toro.com/en/product/Reelmaster-5010-Series,discovery,conventional_mower,en-us,static,1,"Static. Lists 5010-H, 5410-D, 5510-D, 5610-D"
+src-toro-rm7000-series,Toro Reelmaster 7000 Series,toro,official,https://www.toro.com/en/product/Reelmaster-7000-Series,discovery,conventional_mower,en-us,static,1,Static. Lists 7000-D
+src-toro-sitemap,Toro sitemap (text),toro,official,https://www.toro.com/sitemap-toro.txt,discovery,,en-us,static,1,Plain text not XML. Contains NO golf products - kept as a tripwire if that changes
+src-unitedagandturf,United Ag and Turf,deere,dealer,https://www.unitedagandturf.com/,price,,en-us,static,3,CANDIDATE - John Deere dealer. Carries Deere syndicated feed; commercial turf rarely priced

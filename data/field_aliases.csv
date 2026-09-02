@@ -1,0 +1,102 @@
+canonical_field,source_id,literal_label,source_unit,parser,notes
+working_width_in,src-kress-product,Cutting width,in,number,
+working_width_in,src-kress-voyager,Deck width,in,number,
+working_width_in,src-echo-product,Mowing Width (in.),in,number,"Unit is in the LABEL, not the value"
+working_width_in,src-firefly-amp-l100,Width of cut,in,dual_unit,Imperial first: 100″ (254 cm) - keep imperial
+working_width_in,src-firefly-m220av,Width of Cut,in,dual_unit,"Feet-inches form: 20'11"" (638 cm)"
+working_width_in,src-toro-product,Width of Cut,in,dual_unit,"Imperial first: 100"" (254 cm)"
+working_width_in,src-deere-product,Total width of cut,in,dual_unit,METRIC FIRST: 203 cm / 80 in. - take the second value
+working_width_in,src-echo-product,Picking Width (in.),in,number,SUSPECT: appears on mower pages with cut-height-like values. Verify before mapping
+cut_height_min_in,src-kress-product,Cutting height,in,number_range,Range string: 1.18 - 3.54 in -> min
+cut_height_max_in,src-kress-product,Cutting height,in,number_range,Same label -> max
+cut_height_min_in,src-kress-voyager,Cutting height,in,number_range,1.5 - 5.0 in
+cut_height_max_in,src-kress-voyager,Cutting height,in,number_range,
+cut_height_min_in,src-toro-product,Height of Cut Range,in,compound,COMPOUND: packs 3 reel configs in one cell. Needs per-config parse
+cut_height_max_in,src-toro-product,Height of Cut Range,in,compound,
+cut_height_min_in,src-deere-product,Height of cut,in,dual_unit,2-28.5 mm / 0.078-1.125 in. - metric first
+cut_height_max_in,src-deere-product,Height of cut,in,dual_unit,
+cut_height_min_in,src-firefly-amp-l100,Height of Cut,in,number_range,"Per cutting-unit option: RoloRocker .75-2.5, PitchRide .25-1.5"
+cut_height_max_in,src-firefly-amp-l100,Height of Cut,in,number_range,
+cut_height_min_in,src-firefly-x100,(prose),in,prose,No structured label - .5 to 4 inches stated in body text
+max_slope_pct,src-kress-product,Maximum slope,pct,percent,Stated as 40%
+max_slope_pct,src-kress-voyager,Max. Incline,pct,compound,"22 deg / 40% - take the PERCENT, never the degrees"
+max_slope_pct,src-echo-product,Maximum Slope,pct,percent,
+max_slope_pct,src-toro-product,Max Slope Angle,,prose,"Toro punts: 'Refer to operator's manual.' Leave blank, report as gap"
+max_area_acres,src-kress-product,Maximum area (cutting every 72h),acre,number,72h cycle claim
+recommended_area_acres,src-kress-product,Recommend area (cutting every 48h),acre,number,48h cycle claim. Note manufacturer's own typo 'Recommend'
+max_area_acres,src-echo-product,Maximum Working Area,acre,number,
+recommended_area_acres,src-echo-product,Recommended Working Area,acre,number,
+area_per_charge_acres,src-kress-voyager,Coverage per charge,acre,number,up to 7 acres - strip the 'up to'
+area_per_charge_acres,src-firefly-amp-l100,Battery capacity,acre,number,COLLISION: this brand uses 'Battery capacity' to mean acres per charge
+area_capacity_acres_hr,src-firefly-amp-l100,Productivity,acre_hr,dual_unit,6 acres per hour (2.4 hectares/hr)
+area_capacity_acres_hr,src-firefly-m220av,Productivity,acre_hr,number,25 acres/hr
+mowing_speed_mph,src-kress-product,Mowing Speed,m_s,number,UNIT TRAP: Kress publishes m/s (0.8 m/s). Convert to mph
+mowing_speed_mph,src-kress-voyager,Mowing speed,mph,number,up to 5.6 mph
+mowing_speed_mph,src-firefly-amp-l100,Mowing speed,mph,dual_unit,6 mph / 9.7 kph
+mowing_speed_mph,src-firefly-m220av,Mowing Speed,mph,dual_unit,"Same brand, different capitalization - match case-insensitively"
+mow_speed_max_mph,src-toro-product,Mowing Speed,mph,dual_unit,0 - 8 mph (0 - 12.8 km/h)
+mow_speed_max_mph,src-deere-product,Mowing speed,mph,dual_unit,METRIC FIRST: 12.8 km/h / 8 mph
+transport_speed_max_mph,src-firefly-amp-l100,Transport speed,mph,dual_unit,9 mph / 14.5 kph
+transport_speed_max_mph,src-firefly-m220av,Transport Speed,mph,dual_unit,
+transport_speed_max_mph,src-toro-product,Ground Speed - Forward,mph,dual_unit,0 - 10 mph (0 - 16.1 km/h)
+transport_speed_max_mph,src-deere-product,Ground speed,mph,compound,COMPOUND: mowing + transport + reverse packed in one cell
+reverse_speed_max_mph,src-toro-product,Ground Speed - Reverse,mph,dual_unit,
+reverse_speed_max_mph,src-deere-product,Ground speed,mph,compound,Same cell as above
+weight_lb,src-kress-product,Weight,lb,number,26.68 lbs. Not present on every model
+weight_lb,src-echo-product,Weight (lbs.),lb,number,Unit in the LABEL
+weight_lb,src-toro-product,Weight,lb,compound,"COMPOUND by configuration: 'With 5"" cutting units: 2WD - 2,776 lbs.'"
+weight_lb,src-firefly-m220av,"Mower Weight (Total, Decks Down)",lb,dual_unit,Brand publishes 2 weights - this is the total
+weight_lb,src-deere-product,Operating weight,lb,dual_unit,Section often empty on Deere pages
+battery_voltage_v,src-kress-product,Battery voltage,v,number,'Voltage' also appears as a separate label with the same value
+battery_voltage_v,src-kress-product,Voltage,v,number,Duplicate of Battery voltage on Kress pages
+battery_voltage_v,src-kress-voyager,Battery voltage,v,number,48 V
+battery_voltage_v,src-firefly-amp-l100,Voltage,v,number,48V
+battery_capacity_ah,src-kress-product,Battery capacity,ah,number,COLLISION: same label means kWh on Voyager and acres on FireFly
+battery_energy_kwh,src-kress-voyager,Battery capacity,kwh,number,"COLLISION: identical label to the Ah field above - key on source, never label alone"
+battery_energy_kwh,src-firefly-amp-l100,Energy Capacity,kwh,number,35 kWh
+charge_time_hr,src-kress-voyager,Charging time,hr,number,9 hours
+charge_time_hr,src-firefly-amp-l100,Minimum charge time,hr,number,2.5 hours
+num_blades,src-kress-product,Cutting blades,count,number,12
+num_blades,src-echo-product,Blades,count,number_range,Can be a range: 6-12
+num_cutting_units,src-echo-product,Cutting Heads,count,number,'2 floating' - strip the qualifier
+num_cutting_units,src-firefly-m220av,Cutting Decks,count,number,'(3) electric rotary'
+num_cutting_units,src-deere-product,Number,count,number,Under the Cutting Units section - label is ambiguous out of context
+reel_diameter_in,src-toro-product,Reel Diameter,in,dual_unit,5 in. or 7 in. - two options in one cell
+reel_diameter_in,src-deere-product,Reel diameter,in,dual_unit,12.7 cm / 5 in.
+nav_system,src-kress-voyager,Navigation,,text,RTK. NOT the same as Kress's 'Navigation pattern'
+nav_system,src-kress-product,Navigation pattern,,text,"COLLISION RISK: this is the mowing pattern (Systematic), not the nav technology"
+obstacle_avoidance,src-kress-product,OAS - Obstacle Avoidance System,,boolean_check,Rendered as a checkmark
+obstacle_avoidance,src-kress-voyager,Obstacle avoidance,,text,360 camera + ultrasonic + LiDAR
+obstacle_sensors,src-echo-product,Obstacle detection sonar,count,number,"Sensor COUNT, not a boolean"
+noise_db,src-kress-product,Sound level perceived,db,number,58 db
+noise_db,src-echo-product,Maximum Noise (dB),db,number,Unit in the LABEL
+ip_rating,src-kress-product,Water protection index (IP code),,text,IPX5 / IPX6
+fleet_management,src-kress-product,Fleet management,,boolean_check,Checkmark
+anti_theft,src-kress-product,Anti-theft system,,boolean_check,Checkmark. 'PIN code' and 'Auto lock' are related but distinct labels
+connectivity,src-kress-product,4G,,boolean_check,"Also: Wi-Fi/Bluetooth, App, OTA (Over-The-Air), USB"
+drive_type,src-kress-product,Drive system,,text,Rear-wheel drive. Only on some models
+engine_hp,src-toro-product,Engine,hp,prose,Full sentence: 'Yanmar 3-cylinder... 36.8 hp (27.5 kW)'
+engine_hp,src-deere-product,Maximum rated horsepower,hp,dual_unit,METRIC FIRST: 31 kW / 41.6 hp
+engine_hp,src-deere-product,Horsepower,hp,dual_unit,"Second Deere label for the same concept, under Engine"
+engine_hp,src-firefly-m220av,Engine,hp,prose,'125 hp JCB turbo'
+engine_cylinders,src-deere-product,Cylinders,count,text,Spelled out: 'Three'
+engine_displacement_cc,src-deere-product,Displacement,cc,dual_unit,"1.568 L / 95.69 cu in. - neither is cc, convert from L"
+engine_cooling,src-toro-product,Engine Cooling,,text,Liquid Cooled
+emissions_tier,src-deere-product,Compliant emission regulation,,text,United States and Canada Tier 4
+fuel_type,src-toro-product,Fuel / Power Source,,text,Diesel / Biodiesel; Hybrid
+fuel_capacity_gal,src-toro-product,Fuel Capacity,gal,dual_unit,14 U.S. gal. (53 L)
+fuel_capacity_gal,src-deere-product,Fuel tank capacity,gal,dual_unit,45.4 L / 12 U.S. gal.
+fuel_capacity_gal,src-firefly-m220av,Fuel Tank Capacity,gal,dual_unit,60 gal (227 liters)
+overall_length_in,src-toro-product,Product Length,in,dual_unit,"111"" (281.9 cm)"
+overall_length_in,src-deere-product,Length,in,dual_unit,292 cm / 115 in.
+overall_length_in,src-echo-product,Length (ft.),ft,number,"UNIT TRAP: feet, not inches. Unit in the label"
+overall_width_in,src-toro-product,Transport Width,in,dual_unit,"92"" (233.7 cm). 'Overall Width' is a separate, larger figure"
+overall_width_in,src-deere-product,Transport width,in,dual_unit,226 cm / 89 in.
+overall_width_in,src-echo-product,Width (ft.),ft,number,UNIT TRAP: feet
+height_to_rops_in,src-toro-product,Height,in,compound,"'63"" to seat, 85.5"" to ROPS' - two values, one cell"
+height_to_rops_in,src-deere-product,Height with ROPS,in,dual_unit,210.8 cm / 83 in.
+rops,src-deere-product,ROPS,,text,Standard; meets ISO 21299
+rops,src-toro-product,Safety/Operator Safety,,prose,'2-post ROPS and retractable seat belts standard'
+drivetrain,src-toro-product,Traction Drive,,text,Front-Wheel Drive / 3WD
+drivetrain,src-deere-product,Traction drive,,text,
+power_steering,src-toro-product,Power Steering,,boolean_check,Yes / No
